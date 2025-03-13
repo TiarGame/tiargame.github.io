@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #121212;
+            background: linear-gradient(to right, #1f1f1f, #333333);
             color: #fff;
             margin: 0;
             padding: 0;
@@ -18,38 +18,38 @@
 
         header {
             background: linear-gradient(to right, #2c3e50, #34495e);
-            padding: 40px;
+            padding: 60px;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-            border-bottom: 2px solid #f1c40f;
+            border-bottom: 2px solid #fff;
         }
 
         header h1 {
-            font-size: 3.5em;
-            color: #f1c40f;
-            letter-spacing: 3px;
+            font-size: 4em;
+            color: #fff;
+            letter-spacing: 2px;
             margin: 0;
         }
 
         header nav a {
             color: #fff;
             text-decoration: none;
-            padding: 10px 25px;
+            padding: 12px 30px;
             margin: 0 20px;
-            font-size: 1.2em;
+            font-size: 1.4em;
             border-radius: 5px;
             transition: all 0.3s ease;
         }
 
         header nav a:hover {
-            background-color: #f1c40f;
-            color: #2c3e50;
+            background-color: #f1f1f1;
+            color: #333;
         }
 
         .catalog-header {
             text-align: center;
-            padding: 40px 20px;
-            background: #1c1c1c;
+            padding: 60px 20px;
+            background: #222;
             margin-top: 30px;
         }
 
@@ -60,11 +60,13 @@
         }
 
         .catalog-header p {
-            font-size: 1.2em;
+            font-size: 1.3em;
             line-height: 1.6;
             max-width: 900px;
             margin: 0 auto;
+            color: #ccc;
         }
+
         .catalog {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -118,10 +120,9 @@
     </header>
     <div class="catalog-header">
         <h2>Browse Our Cosmetic Items</h2>
-        <p>Check out the exclusive cosmetic available in T.I.A.R. to customize your loadout!</p>
+        <p>Check out the exclusive cosmetics available in T.I.A.R. to customize your loadout!</p>
     </div>
-    <div class="catalog" id="cosmeticCatalog">
-    </div>
+    <div class="catalog" id="cosmeticCatalog"></div>
     <script>
         const cosmetics = [
             {

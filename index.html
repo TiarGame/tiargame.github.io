@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.I.A.R. - This Is A Robbery!</title>
+    <link rel="icon" href="tiar.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            transition: all 0.3s ease;
+        }
+        h1, h2 {
+            font-family: 'Roboto', sans-serif;
+        }
+        header {
+            background: linear-gradient(to right, #2c3e50, #34495e);
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            border-bottom: 2px solid #f1c40f;
+        }
+        header h1 {
+            font-size: 3.5em;
+            color: #f1c40f;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 25px;
+            margin: 0 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        header nav a:hover {
+            background-color: #f1c40f;
+            color: #2c3e50;
+        }
+        .main-content {
+            text-align: center;
+            padding: 100px 20px;
+            background: #1c1c1c;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-content h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+        }
+        .main-content p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+        .btn-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 40px;
+        }
+        .btn {
+            background-color: #f1c40f;
+            color: #121212;
+            padding: 15px 35px;
+            font-size: 1.4em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transform: scale(1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e67e22;
+            transform: scale(1.1);
+        }
+        .embed-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .embed-container iframe {
+            width: 80%;
+            height: 450px;
+            border: none;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #f1c40f;
+            color: #121212;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .close-btn:hover {
+            background-color: #e67e22;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>T.I.A.R.</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="catalog.html">Catalog</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Welcome to T.I.A.R. - The Ultimate Heist Game!</h2>
+        <p>
+            Dive into the world of high-stakes heists in <strong>T.I.A.R. (This Is A Robbery!)</strong> – a thrilling action-packed game where you take on the role of a criminal mastermind. Plan and execute daring robberies at banks and properties to earn money and rise to the top of the criminal underworld.
+            Inspired by iconic games like <strong>PayDay</strong> and <strong>One-Armed Robber</strong>, T.I.A.R. offers players an intense, strategic, and adrenaline-filled experience. Work with a team of skilled criminals or go solo – the choice is yours.
+            From acquiring specialized tools for each job to customizing your look, every choice impacts your heist. Whether it’s infiltrating a high-security bank or robbing a luxurious estate, your plan will be your weapon, and time will be your enemy.
+        </p>
+        <div class="btn-container">
+            <div class="btn" id="downloadBtn">Download Soon</div>
+        </div>
+    </div>
+    <div class="embed-container" id="embedContainer">
+        <button class="close-btn" onclick="closeEmbed()">Close</button>
+        <iframe src="https://itch.io/embed/3382389?linkback=true&amp;border_width=2&amp;bg_color=000000&amp;fg_color=ffffff&amp;link_color=ffffff&amp;border_color=000000" width="554" height="169"></iframe>
+    </div>
+    <script>
+        const downloadBtn = document.getElementById('downloadBtn');
+        const embedContainer = document.getElementById('embedContainer');
+        downloadBtn.addEventListener('click', function() {
+            embedContainer.style.display = 'flex';
+        });
+        function closeEmbed() {
+            embedContainer.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
